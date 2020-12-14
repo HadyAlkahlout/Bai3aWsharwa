@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp">
+
+    <TextView
+        android:id="@+id/tvTitles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/app_font"
+        android:text="@string/pick_country"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitles">
+
+        <RadioButton
+            android:id="@+id/rbKuwait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/app_font"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="Kuwait - الكويت"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/ic_kuwait"/>
+
+        <RadioButton
+            android:id="@+id/rbSaudi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:fontFamily="@font/app_font"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="Saudi Arabia - السعودية"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/ic_saudia" />
+
+        <RadioButton
+            android:id="@+id/rbEgypt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:fontFamily="@font/app_font"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="Egypt - مصر"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/ic_egypt" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPickCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgCountry" />
+</androidx.constraintlayout.widget.ConstraintLayout>
